@@ -208,6 +208,7 @@ export default function Page() {
                 transform: scale(1);
               }
               100% {
+              
                 transform: scale(1.14);
               }
             }
