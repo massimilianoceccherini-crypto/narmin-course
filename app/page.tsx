@@ -1,7 +1,40 @@
 "use client";
+
 import React, { useState } from "react";
 
-const screens = [
+type Option = {
+  id: string;
+  label: string;
+  image: string;
+};
+
+type Screen =
+  | {
+      id: string;
+      type: "intro";
+      title: string;
+      buttonText: string;
+      emoji: string;
+    }
+  | {
+      id: string;
+      type: "choice";
+      title: string;
+      options: Option[];
+    }
+  | {
+      id: string;
+      type: "see-result";
+      title: string;
+      buttonText: string;
+    }
+  | {
+      id: string;
+      type: "result";
+      finalImage: string;
+    };
+
+const screens: Screen[] = [
   {
     id: "intro",
     type: "intro",
@@ -77,7 +110,13 @@ const screens = [
   },
 ];
 
-function ChoiceScreen({ screen, onPick }) {
+function ChoiceScreen({
+  screen,
+  onPick,
+}: {
+  screen: Extract<Screen, { type: "choice" }>;
+  onPick: (groupId: string, optionId: string) => void;
+}) {
   return (
     <div>
       <h2 className="mb-6 text-center text-3xl font-serif text-white">
@@ -103,8 +142,8 @@ function ChoiceScreen({ screen, onPick }) {
 }
 
 export default function Page() {
-  const [currentScreen, setCurrentScreen] = useState(0);
-  const [, setChoices] = useState({});
+  const [currentScreen, setCurrentScreen] = useState<number>(0);
+  const [, setChoices] = useState<Record<string, string>>({});
 
   const screen = screens[currentScreen];
 
@@ -112,7 +151,7 @@ export default function Page() {
     setCurrentScreen((prev) => Math.min(prev + 1, screens.length - 1));
   };
 
-  const handleChoice = (groupId, optionId) => {
+  const handleChoice = (groupId: string, optionId: string) => {
     setChoices((prev) => ({ ...prev, [groupId]: optionId }));
     goNext();
   };
@@ -142,9 +181,7 @@ export default function Page() {
 
           {screen.type === "see-result" && (
             <div className="text-center">
-              <h2 className="text-4xl font-serif text-white">
-                {screen.title}
-              </h2>
+              <h2 className="text-4xl font-serif text-white">{screen.title}</h2>
               <button
                 onClick={goNext}
                 className="mt-6 rounded-full border border-white/30 bg-white px-6 py-3 text-lg font-medium text-black shadow-lg transition hover:scale-105"
@@ -165,7 +202,7 @@ export default function Page() {
           />
           <div className="pointer-events-none absolute inset-0 bg-black/10" />
 
-          <style>{`
+          <style jsx global>{`
             @keyframes slowZoom {
               0% {
                 transform: scale(1);
