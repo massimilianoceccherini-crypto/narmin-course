@@ -47,10 +47,10 @@ const screens: Screen[] = [
     type: "choice",
     title: "Pick Your Mood",
     options: [
-      { id: "mood-1", label: "Scarlet Witch", image: "/images/mood-1.jpg" },
-      { id: "mood-2", label: "Warrior", image: "/images/mood-2.jpg" },
-      { id: "mood-3", label: "Hungry", image: "/images/mood-3.jpg" },
-      { id: "mood-4", label: "Dreamy", image: "/images/mood-4.jpg" },
+      { id: "mood-1", label: "Scarlet Witch", image: "/Images/mood-1.jpg" },
+      { id: "mood-2", label: "Warrior", image: "/Images/mood-2.jpg" },
+      { id: "mood-3", label: "Hungry", image: "/Images/mood-3.jpg" },
+      { id: "mood-4", label: "Dreamy", image: "/Images/mood-4.jpg" },
     ],
   },
   {
@@ -58,10 +58,10 @@ const screens: Screen[] = [
     type: "choice",
     title: "Pick Your Flower",
     options: [
-      { id: "flower-1", label: "Spider Lily", image: "/images/flower-1.jpg" },
-      { id: "flower-2", label: "Tulip", image: "/images/flower-2.jpg" },
-      { id: "flower-3", label: "Orchid", image: "/images/flower-3.jpg" },
-      { id: "flower-4", label: "Mountain Flower", image: "/images/flower-4.jpg" },
+      { id: "flower-1", label: "Spider Lily", image: "/Images/flower-1.jpg" },
+      { id: "flower-2", label: "Tulip", image: "/Images/flower-2.jpg" },
+      { id: "flower-3", label: "Orchid", image: "/Images/flower-3.jpg" },
+      { id: "flower-4", label: "Mountain Flower", image: "/Images/flower-4.jpg" },
     ],
   },
   {
@@ -69,10 +69,10 @@ const screens: Screen[] = [
     type: "choice",
     title: "Pick Your Spirit Animal",
     options: [
-      { id: "animal-1", label: "Polar Bear", image: "/images/animal-1.jpg" },
-      { id: "animal-2", label: "Dragon", image: "/images/animal-2.jpg" },
-      { id: "animal-3", label: "Bunny", image: "/images/animal-3.jpg" },
-      { id: "animal-4", label: "Monkey", image: "/images/animal-4.jpg" },
+      { id: "animal-1", label: "Polar Bear", image: "/Images/animal-1.jpg" },
+      { id: "animal-2", label: "Dragon", image: "/Images/animal-2.jpg" },
+      { id: "animal-3", label: "Bunny", image: "/Images/animal-3.jpg" },
+      { id: "animal-4", label: "Monkey", image: "/Images/animal-4.jpg" },
     ],
   },
   {
@@ -80,10 +80,10 @@ const screens: Screen[] = [
     type: "choice",
     title: "Pick Your Ride",
     options: [
-      { id: "ride-1", label: "Dune Buggy", image: "/images/ride-1.jpg" },
-      { id: "ride-2", label: "Maggiolone", image: "/images/ride-2.jpg" },
-      { id: "ride-3", label: "Purple Lamborghini", image: "/images/ride-3.jpg" },
-      { id: "ride-4", label: "Maybach", image: "/images/ride-4.jpg" },
+      { id: "ride-1", label: "Dune Buggy", image: "/Images/ride-1.jpg" },
+      { id: "ride-2", label: "Maggiolone", image: "/Images/ride-2.jpg" },
+      { id: "ride-3", label: "Purple Lamborghini", image: "/Images/ride-3.jpg" },
+      { id: "ride-4", label: "Maybach", image: "/Images/ride-4.jpg" },
     ],
   },
   {
@@ -91,10 +91,10 @@ const screens: Screen[] = [
     type: "choice",
     title: "Pick Your Hero",
     options: [
-      { id: "hero-1", label: "Pirate", image: "/images/hero-1.jpg" },
-      { id: "hero-2", label: "Gladiator", image: "/images/hero-2.jpg" },
-      { id: "hero-3", label: "Prince", image: "/images/hero-3.jpg" },
-      { id: "hero-4", label: "Sorcerer", image: "/images/hero-4.jpg" },
+      { id: "hero-1", label: "Pirate", image: "/Images/hero-1.jpg" },
+      { id: "hero-2", label: "Gladiator", image: "/Images/hero-2.jpg" },
+      { id: "hero-3", label: "Prince", image: "/Images/hero-3.jpg" },
+      { id: "hero-4", label: "Sorcerer", image: "/Images/hero-4.jpg" },
     ],
   },
   {
@@ -106,7 +106,7 @@ const screens: Screen[] = [
   {
     id: "result",
     type: "result",
-    finalImage: "/images/final-photo.jpg",
+    finalImage: "/Images/final-photo.jpg",
   },
 ];
 
@@ -208,7 +208,7 @@ export default function Page() {
                 transform: scale(1);
               }
               100% {
-              
+
                 transform: scale(1.14);
               }
             }
